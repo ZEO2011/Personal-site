@@ -1,11 +1,11 @@
 /* Start Variables */
 
 :root {
-     --main-color: #28A5F6;
+     --main-color: #28a5f6;
      --main-transition: 0.3s;
      --main-color-alt: #1787e0;
      --main-padding: 100px;
-     --section-background: #ECECEC;
+     --section-background: #ececec;
 }
 
 /* End Variables */
@@ -22,7 +22,7 @@
 }
 
 body {
-     font-family: 'Cairo', sans-serif;
+     font-family: "Cairo", sans-serif;
 }
 
 html {
@@ -211,7 +211,7 @@ header .main-nav>li>a::before {
 
 header .main-nav>li>a:hover {
      color: var(--main-color);
-     background-color: #FAFAFA;
+     background-color: #fafafa;
 }
 
 header .main-nav>li>a:hover::before {
@@ -267,18 +267,18 @@ header .mega-menu li::before {
      top: 0;
      width: 0;
      height: 100%;
-     background-color: #FAFAFA;
+     background-color: #fafafa;
      z-index: -1;
      transition: var(--main-transition);
 }
 
 header .mega-menu .links li:not(:last-child) {
-     border-bottom: 1px solid #E6E6E6;
+     border-bottom: 1px solid #e6e6e6;
 }
 
 @media (max-width: 991px) {
      header .mega-menu .links:first-of-type li:last-child {
-          border-bottom: 1px solid #E6E6E6;
+          border-bottom: 1px solid #e6e6e6;
      }
 }
 
@@ -417,7 +417,8 @@ header .mega-menu .links li i {
      border-radius: 6px;
      box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
      background-color: white;
-     transition: transform var(--main-transition), box-shadow var(--main-transition);
+     transition: transform var(--main-transition),
+          box-shadow var(--main-transition);
 }
 
 .articles .box:hover {
@@ -446,7 +447,7 @@ header .mega-menu .links li i {
 
 .articles .box .info {
      padding: 10px;
-     border-top: 1px solid #E6E6E6;
+     border-top: 1px solid #e6e6e6;
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -460,7 +461,6 @@ header .mega-menu .links li i {
 
 .articles .box .info i {
      color: var(--main-color);
-
 }
 
 .articles .box:hover .info i {
@@ -487,13 +487,13 @@ header .mega-menu .links li i {
 .gallery .box {
      padding: 15px;
      background-color: white;
-     box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
+     box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
+          0px 2px 4px 0px rgb(0 0 0 / 12%);
 }
 
 .gallery .box .img-holder {
      overflow: hidden;
      position: relative;
-
 }
 
 .gallery .box .img-holder::before {
@@ -540,7 +540,7 @@ header .mega-menu .links li i {
 
 .features .box {
      text-align: center;
-     border: 1px solid #CCC;
+     border: 1px solid #ccc;
 }
 
 .features .box .image-holder {
@@ -619,14 +619,13 @@ header .mega-menu .links li i {
 }
 
 .features .quality h2::after {
-     background-color: #F44036;
-
+     background-color: #f44036;
 }
 
 .features .quality a {
-     color: #F44036;
-     border-color: #F44036;
-     background: linear-gradient(to right, #F44036 50%, white 50%);
+     color: #f44036;
+     border-color: #f44036;
+     background: linear-gradient(to right, #f44036 50%, white 50%);
      background-size: 200% 100%;
      background-position: right bottom;
 }
@@ -725,7 +724,7 @@ header .mega-menu .links li i {
 }
 
 .testimonials .filled {
-     color: #FFC107;
+     color: #ffc107;
 }
 
 .testimonials p {
@@ -758,7 +757,7 @@ header .mega-menu .links li i {
 .team .box::before,
 .team .box::after {
      content: "";
-     background-color: #F3F3F3;
+     background-color: #f3f3f3;
      position: absolute;
      right: 0;
      top: 0;
@@ -780,15 +779,13 @@ header .mega-menu .links li i {
 
 .team .box::after {
      z-index: -1;
-     background-color: #E4E4E4;
+     background-color: #e4e4e4;
      width: 0;
 }
-
 
 .team .box:hover::after {
      width: calc(100% - 60px);
 }
-
 
 @media (max-width: 767px) {
      .team .box:hover::after {
@@ -855,19 +852,19 @@ header .mega-menu .links li i {
 }
 
 .team .box .data .social a:hover .fa-facebook-f {
-     color: #4867AA;
+     color: #4867aa;
 }
 
 .team .box .data .social a:hover .fa-twitter {
-     color: #1DA1F2;
+     color: #1da1f2;
 }
 
 .team .box .data .social a:hover .fa-linkedin {
-     color: #0077B5;
+     color: #0077b5;
 }
 
 .team .box .data .social a:hover .fa-youtube {
-     color: #FF0000;
+     color: #ff0000;
 }
 
 /* End Team */
@@ -921,7 +918,7 @@ header .mega-menu .links li i {
      margin: 40px auto 20px;
      display: block;
      text-align: center;
-     color: #D5D5D5;
+     color: #d5d5d5;
 }
 
 .services .box>h3 {
@@ -934,7 +931,7 @@ header .mega-menu .links li i {
 .services .box .info {
      padding: 15px;
      position: relative;
-     background-color: #F9F9F9;
+     background-color: #f9f9f9;
      text-align: right;
 }
 
@@ -958,7 +955,7 @@ header .mega-menu .links li i {
 .services .box .info::after {
      content: "";
      position: absolute;
-     background-color: #D5D5D5;
+     background-color: #d5d5d5;
      top: 0;
      left: 80px;
      width: 50px;
@@ -972,10 +969,69 @@ header .mega-menu .links li i {
 
 /* End Services */
 
+/* Start Skills */
+.our-skills {
+     padding-top: var(--main-padding);
+     padding-bottom: var(--main-padding);
+     position: relative;
+}
+
+.our-skills .container {
+     display: flex;
+     align-items: center;
+}
+
+@media (max-width: 991px) {
+     .our-skills img {
+          display: none;
+     }
+}
+
+.our-skills .skills {
+     flex: 1;
+}
+
+.our-skills .skill {
+     padding: 20px;
+}
+
+.our-skills .skill h3 {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 5px;
+}
+
+.our-skills .skill h3 span {
+     font-size: 12px;
+     border: 1px solid #ccc;
+     padding: 3px 5px;
+     border-radius: 4px;
+     color: var(--main-color);
+     margin-bottom: 5px;
+}
+
+.our-skills .skill .the-progress {
+     height: 30px;
+     background-color: #eee;
+     position: relative;
+}
+
+.our-skills .skill .the-progress span {
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 100%;
+     background-color: var(--main-color);
+     transition: width 0.5s linear;
+}
+
+/* End Skills */
+
 /* Start Work Steps */
 .work-steps {
-     padding-top: var(--main-padding-top);
-     padding-bottom: var(--main-padding-bottom);
+     padding-top: var(--main-padding);
+     padding-bottom: var(--main-padding);
      position: relative;
      background-color: var(--section-background);
 }
@@ -1064,65 +1120,6 @@ header .mega-menu .links li i {
 }
 
 /* End Work Steps */
-
-/* Start Skills */
-.our-skills {
-     padding-top: var(--main-padding);
-     padding-bottom: var(--main-padding);
-     position: relative;
-}
-
-.our-skills .container {
-     display: flex;
-     align-items: center;
-}
-
-@media (max-width: 991px) {
-     .our-skills img {
-          display: none;
-     }
-}
-
-.our-skills .skills {
-     flex: 1;
-}
-
-.our-skills .skill {
-     padding: 20px;
-}
-
-.our-skills .skill h3 {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     margin-bottom: 5px;
-}
-
-.our-skills .skill h3 span {
-     font-size: 12px;
-     border: 1px solid #ccc;
-     padding: 3px 5px;
-     border-radius: 4px;
-     color: var(--main-color);
-     margin-bottom: 5px;
-}
-
-.our-skills .skill .the-progress {
-     height: 30px;
-     background-color: #eee;
-     position: relative;
-}
-
-.our-skills .skill .the-progress span {
-     position: absolute;
-     left: 0;
-     top: 0;
-     height: 100%;
-     background-color: var(--main-color);
-     transition: width 0.5s linear;
-}
-
-/* End Skills */
 
 /* Start Animation */
 @keyframes up-and-down {
