@@ -1228,6 +1228,12 @@ header .mega-menu .links li i {
      border: none;
      flex: 1;
      caret-color: var(--main-color);
+     text-transform: lowercase;
+}
+
+.events .subscribe form input[type="email"]:visited {
+     background-color: white;
+     color: black;
 }
 
 @media (max-width: 767px) {
