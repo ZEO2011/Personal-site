@@ -1164,6 +1164,7 @@ header .mega-menu .links li i {
 
 .events .info .time .unit span {
      display: block;
+     transition: var(--main-transition);
 }
 
 .events .info .time .unit span:first-child {
@@ -1175,8 +1176,8 @@ header .mega-menu .links li i {
 
 .events .info .time .unit span:last-child {
      padding: 8px 10px;
-     border-top: 1px solid #D4D4D4;
      font-size: 13px;
+     border-top: 1px solid #d4d4d4;
 }
 
 .events .info .time .unit:hover,
@@ -1186,15 +1187,15 @@ header .mega-menu .links li i {
 
 .events .title {
      text-align: center;
-     margin: 40px 0 10px 0;
+     margin: 40px 0 0;
      font-size: 30px;
 }
 
 .events .description {
      text-align: center;
      line-height: 1.7;
-     color: #777;
      font-size: 19px;
+     color: #777;
 }
 
 .events .subscribe {
@@ -1204,9 +1205,9 @@ header .mega-menu .links li i {
 
 .events .subscribe form {
      width: 600px;
-     padding: 30px 40px;
      margin: 20px auto;
-     background-color: #F6F6F6;
+     padding: 30px 40px;
+     background-color: #f6f5f5;
      border-radius: 50px;
      display: flex;
      gap: 20px;
@@ -1221,51 +1222,212 @@ header .mega-menu .links li i {
      }
 }
 
-.events .subscribe form input[type="Email"] {
+.events .subscribe form input[type="email"] {
      padding: 20px;
-     border-radius: inherit;
+     border-radius: 50px;
+     border: none;
      flex: 1;
      caret-color: var(--main-color);
-     border: none;
 }
 
-.events .subscribe form input[type="Email"]:focus {
+@media (max-width: 767px) {
+     .events .subscribe form input[type="email"] {
+          border-radius: 0;
+     }
+}
+
+.events .subscribe form input[type="email"]:focus {
      outline: none;
-     color: black;
 }
 
-.events .subscribe form input[type="Email"]::placeholder {
+.events .subscribe form input[type="email"]::placeholder {
      transition: opacity var(--main-transition);
 }
 
-.events .subscribe form input[type="Email"]:focus::placeholder {
+.events .subscribe form input[type="email"]:focus::placeholder {
      opacity: 0;
 }
 
 .events .subscribe form input[type="submit"] {
-     border-radius: inherit;
+     border-radius: 50px;
      border: none;
+     background-color: var(--main-color);
      color: white;
      font-weight: bold;
-     cursor: pointer;
      padding: 20px;
-     background-color: var(--main-color);
+     cursor: pointer;
      transition: var(--main-transition);
+}
+
+@media (max-width: 767px) {
+     .events .subscribe form input[type="submit"] {
+          border-radius: 0;
+     }
 }
 
 .events .subscribe form input[type="submit"]:hover {
      background-color: var(--main-color-alt);
 }
 
-@media (max-width: 767px) {
+/* End Events */
 
-     .events .subscribe form input[type="Email"],
-     .events .subscribe form input[type="submit"] {
-          border: 0;
+/* Start Pricing */
+
+.pricing {
+     padding-top: var(--main-padding);
+     padding-bottom: var(--main-padding);
+     position: relative;
+     background-color: var(--section-background);
+}
+
+.pricing .container {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+     gap: 30px;
+}
+
+.pricing .box {
+     position: relative;
+     box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
+          0px 2px 4px 0px rgb(0 0 0 / 12%);
+     text-align: center;
+     z-index: 1;
+     background-color: white;
+     transition: var(--main-transition);
+}
+
+.pricing .box:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+
+.pricing .box::before,
+.pricing .box::after {
+     content: "";
+     width: 0;
+     height: 50%;
+     background-color: #F6F6F6;
+     position: absolute;
+     z-index: -1;
+     transition: var(--main-transition);
+}
+
+.pricing .box::before {
+     left: 0;
+     top: 0;
+}
+
+.pricing .box::after {
+     right: 0;
+     bottom: 0;
+}
+
+.pricing .box:hover::before,
+.pricing .box:hover::after {
+     width: 100%;
+}
+
+@media (min-width: 1200px) {
+     .pricing .box.popular {
+          top: -20px;
      }
 }
 
-/* End Events */
+.pricing .box.popular .label {
+     position: absolute;
+     writing-mode: vertical-rl;
+     background-color: var(--main-color);
+     color: white;
+     font-weight: bold;
+     padding: 10px 10px 35px 10px;
+     font-size: 18px;
+     right: 20px;
+     width: 40px;
+     transition: var(--main-transition);
+}
+
+.pricing .box.popular:hover .label {
+     background-color: rgba(255, 217, 0, 0.815);
+}
+
+.pricing .box.popular .label::before {
+     content: "";
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     border-style: solid;
+     border-color: transparent transparent white transparent;
+     border-width: 20px;
+     transition: var(--main-transition);
+}
+
+.pricing .box.popular:hover .label::before {
+     border-color: transparent transparent #F6F6F6 transparent;
+}
+
+.pricing .box .title {
+     font-weight: bold;
+     margin: 30px 0;
+     font-size: 25px;
+     letter-spacing: -1px;
+}
+
+.pricing .box img {
+     width: 80px;
+     margin-bottom: 30px;
+}
+
+.pricing .box .price {
+     margin-bottom: 20px;
+}
+
+.pricing .box .amount {
+     display: block;
+     font-size: 60px;
+     font-weight: bold;
+     margin-bottom: 5px;
+     color: var(--main-color);
+}
+
+.pricing .box .time {
+     color: #777;
+}
+
+.pricing .box ul {
+     text-align: left;
+}
+
+.pricing .box ul li {
+     padding: 20px;
+     border-top: 1px solid #EEE;
+}
+
+.pricing .box ul li::before {
+     font-family: "Font Awesome 5 Free";
+     content: "\f00c";
+     margin-right: 10px;
+     font-weight: bold;
+     color: var(--main-color);
+}
+
+.pricing .box a {
+     display: block;
+     width: fit-content;
+     border: 2px solid var(--main-color);
+     color: var(--main-color);
+     margin: 30px auto 40px;
+     padding: 15px 20px;
+     border-radius: 6px;
+     transition: var(--main-transition);
+}
+
+.pricing .box a:hover {
+     background-color: var(--main-color-alt);
+     border-color: white;
+     color: white;
+}
+
+/* End Pricing */
 
 /* Start Animation */
 @keyframes up-and-down {
