@@ -1738,10 +1738,17 @@ header .mega-menu .links li i
      justify-content: space-between;
 }
 
-.videos .preview iframe
+.videos .preview img
 {
-     width: 850px;
-     height: 500px;
+     width: 100%;
+}
+
+@media (max-width: 1080px)
+{
+     .videos .preview iframe
+     {
+          display: none;
+     }
 }
 
 .videos .preview .info
