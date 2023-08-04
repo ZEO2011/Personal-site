@@ -815,7 +815,9 @@ header .mega-menu .links li i {
 	border-radius: 10px;
 }
 
-.team .box:hover img {filter: grayscale(100%);}
+.team .box:hover img {
+	filter: grayscale(100%);
+}
 
 .team .box .data .social {
 	width: 60px;
@@ -1021,11 +1023,12 @@ header .mega-menu .links li i {
 
 .our-skills .skill .the-progress span {
 	position: absolute;
+	display: block;
 	left: 0;
 	top: 0;
 	height: 100%;
 	background-color: var(--main-color);
-	transition: width 0.5s linear;
+	transitionl: width 0.5s linear;
 }
 
 /* End Skills */
@@ -1148,8 +1151,9 @@ header .mega-menu .links li i {
 }
 
 .events .info .time {
-	display: grid;
-	place-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 20px auto;
 	gap: 10px;
 }
@@ -1581,6 +1585,10 @@ header .mega-menu .links li i {
 	font-weight: bold;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.stats :nth-child(4) .number::after {
+	content: "K";
 }
 
 .stats .box .text {
